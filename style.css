@@ -11,6 +11,9 @@
   font-size: 32px;
   line-height: 40px;
 
+    font-size: 40px;
+    line-height: 45px;
+
   font-size: 56px;
   line-height: 56px;
 */
@@ -60,7 +63,6 @@
 .project__top-text {
   width: 70%;
 }
-
 /* /ТОР */
 
 
@@ -90,16 +92,25 @@
   cursor: pointer;
 }
 
-
 .video__main-header {
   font-weight: 400;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 40px;
+  line-height: 45px;
   width: 85%;
 }
 
 .video__main-members {
   margin: -10px 0 60px 0;
+}
+
+.video__main-link {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #000000;
+}
+
+.video__main-link:visited {
+  color: #888888;
 }
 
 .video__timecodes-block {
@@ -146,7 +157,6 @@
   left: 44%;
 }
 
-
 .hidden {
   max-height: 0;
   overflow: hidden;
@@ -154,16 +164,8 @@
 }
 
 .visible {
-  max-height: 500px;
-  /* Высота должна быть достаточной для вашего содержимого */
   transition: max-height 0.4s ease-in;
 }
-
-
-
-
-
-
 
 .video__right {
   min-width: 200px;
@@ -231,9 +233,97 @@
 
 }
 
-
 /* /ВИДЕО */
 
+/* СТАТЬЯ */
+.article__container {
+  font-family: 'Myriad Pro Light', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000;  
+}
+.article__anons-container {
+  width: 100%;
+  margin: 50px auto 50px auto;
+  color: #ffffff;  
+  background: url(img/back_blue.png) top center / cover no-repeat;
+  border-radius: 150px 0px 150px 0px;
+}
+.article__anons {
+  max-width: 1200px;
+  padding: 50px;
+  margin: 0 auto;
+}
+.article__anons-text {
+  width: 85%;
+}
+
+.article__main-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.article__header {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 45px;
+  width: 85%;
+  padding: 30px 0 10px 0;
+}
+
+.article__header3 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  width: 85%;
+  padding: 30px 0 10px 0;
+}
+.article__text {
+  width: 85%;
+}
+
+.article__pic {
+  width: 85%;
+  position: relative;
+}
+
+.article__pic-back {
+  width: 100%;
+  margin: 50px auto 200px 50px;
+  background: url(img/back_grey.png) top center / cover no-repeat;
+  border-radius: 70px;
+  height: 680px;
+}
+.article__pic-main {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 95%;
+  border: 5px solid #ffffff;
+}
+.article__pic-img {
+  padding: 20px 0 0 0;
+}
+
+
+.article__pic-back2 {
+  width: 100%;
+  margin: 50px 50px 200px auto;
+  background: url(img/back_grey.png) top center / cover no-repeat;
+  border-radius: 70px;
+  height: 680px;
+}
+.article__pic-main2 {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 95%;
+  border: 5px solid #ffffff;
+}
+.article__pic-img2 {
+  padding: 20px 0 0 20px;
+}
 
 
 
@@ -242,15 +332,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
+/* /СТАТЬЯ */
 
 
 
