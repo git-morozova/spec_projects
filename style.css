@@ -61,6 +61,17 @@ html {
   z-index: -10;
 }
 
+.project__back-center2 {
+  background: rgba(51, 122, 183, 0.25);
+  position: absolute;
+  width: 100%;
+  height: 211px;
+  border-radius: 100px;
+  opacity: 27%;
+  margin-left: -150px;
+  z-index: -10;
+}
+
 .project__back-left {
   background: -webkit-linear-gradient(to bottom, rgba(51, 122, 183, 0.25), rgba(51, 122, 183, 0));
   background: -moz-linear-gradient(to bottom, rgba(51, 122, 183, 0.25), rgba(51, 122, 183, 0));
@@ -455,7 +466,7 @@ html {
 /* /СТАТЬЯ */
 
 
-/* ПЛИТКА С ВИДЕО */
+/* ПЛИТКА */
 .project__bottom-container {
   font-family: 'Myriad Pro Light', sans-serif;
   width: 100%;
@@ -497,6 +508,11 @@ html {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.project__cols-container2 {
+  position: relative;
+  width: 140px;
+}
+
 .project__cols-block {
   display: flex;
   flex-wrap: wrap;
@@ -508,6 +524,9 @@ html {
   text-decoration: none;
 }
 
+.project__cols-link2 {
+  display: flex;
+}
 .project__cols-link:visited {
   color: #888888;
 }
@@ -518,6 +537,15 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.project__cols-playbtn2 {
+ width: 109px;
+ height:109px;
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -536,14 +564,16 @@ html {
   font-size: 18px;
   line-height: 28px;
   max-width: 350px;
-
 }
 
+.project__cols-text2 {
+  padding: 20px 43px 20px 0;
+  font-size: 16px;
+  line-height: 22px;
+  max-width: 181px;
+}
 
-
-
-
-/* /ПЛИТКА С ВИДЕО */
+/* /ПЛИТКА */
 
 
 
