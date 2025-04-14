@@ -11,9 +11,9 @@ function jumpToTime(seconds) {
 document.getElementById('toggleButton').addEventListener('click', function() {
     const expandableBlock = document.getElementById('expandableBlock');
     
-    if (expandableBlock.classList.contains('hidden')) {
-        expandableBlock.classList.remove('hidden');
-        expandableBlock.classList.add('visible');        
+    if (expandableBlock.classList.contains('project__hidden')) {
+        expandableBlock.classList.remove('project__hidden');
+        expandableBlock.classList.add('project__visible');        
         this.style.display = 'none'; 
     }
 });
