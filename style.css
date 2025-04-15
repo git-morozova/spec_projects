@@ -32,12 +32,12 @@
 
 @font-face {
   font-family: 'Myriad Pro';
-  src: url('../font/MYRIADPRO-REGULAR.OTF');
+  src: url('../font/mp_regular.otf');
 }
 
 @font-face {
   font-family: 'Myriad Pro Bold';
-  src: url('../font/MYRIADPRO-BOLD.OTF');
+  src: url('../font/mp_bold.otf');
 }
 
 html {
