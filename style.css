@@ -19,7 +19,7 @@
 
   font-size: 56px;
   line-height: 56px;
-*/
+
 @font-face {
   font-family: 'Myriad Pro Light';
   src: url('../font/myriadpro-light.eot');
@@ -29,15 +29,16 @@
     url('../font/myriadpro-light.ttf') format('truetype'),
     url('../font/myriadpro-light.svg#myriadpro-light') format('svg');
 }
+*/
 
 @font-face {
   font-family: 'Myriad Pro';
-  src: url('../font/mp_regular.otf');
+  src: url('font/mp_regular.otf');
 }
 
 @font-face {
   font-family: 'Myriad Pro Bold';
-  src: url('../font/mp_bold.otf');
+  src: url('/font/mp_bold.otf');
 }
 
 html {
