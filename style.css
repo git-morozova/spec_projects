@@ -465,6 +465,29 @@ html {
   line-height: 28px !important;
 }
 
+.article__btn-container {
+  text-align: center;
+  width: 85%;
+  margin-top: 35px;
+  margin-bottom: 100px;
+
+}
+.article__btn {
+  border: 3px solid #337AB7;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 14px 53px;
+  font-size: 22px;
+  line-height: 28px;
+  color: #337AB7;
+  text-decoration: none;
+}
+
+.article__btn:hover {
+  background-color: #eff7ff;
+}
+
 .article__list {
   padding-left: 30px !important;
   list-style-type: disc !important;
