@@ -364,7 +364,7 @@ html {
 }
 
 .video__right-link:visited {
-  color: #888888;
+  color: #888888 !important
 }
 
 .video__right-playbtn {
@@ -390,7 +390,7 @@ html {
   padding: 20px 0 50px 0;
   font-size: 18px;
   line-height: 28px;
-  font-weight: 700 !important;
+  color: #000 !important;
 }
 /* /ВИДЕО */
 
@@ -623,9 +623,12 @@ html {
 }
 
 .project__cols-link:visited {
-  color: #888888;
+  color: #888888 !important;
 }
 
+.project__cols-link2:visited {
+  color: #888888 !important;
+}
 .project__cols-playbtn {
   position: absolute;
   top: 50%;
@@ -659,7 +662,8 @@ html {
   font-size: 18px;
   line-height: 28px;
   max-width: 350px;
-  font-weight: 700 !important;
+ color: #000 !important;
+
 }
 
 .project__cols-text2 {
@@ -667,7 +671,7 @@ html {
   font-size: 18px;
   line-height: 28px;
   width: 180px;
-  font-weight: 700 !important;
+  color: #000 !important;
 }
 /* /ПЛИТКА */
 
