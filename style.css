@@ -65,22 +65,22 @@ html {
   content: "";
   position: absolute;
   background-color: #337AB7;
-  width:  0%;
+  width: 0%;
   height: 0%;
   top: 50%;
   left: 50%;
-  transition: 
-  width 0.35s ease, 
-  height 0.15s ease, 
-  left 0.35s ease, 
-  top 0.15s ease, 
-  transform 0.5s ease;
-  border-radius: 30px; 
+  transition:
+    width 0.35s ease,
+    height 0.15s ease,
+    left 0.35s ease,
+    top 0.15s ease,
+    transform 0.5s ease;
+  border-radius: 30px;
   z-index: -1;
 }
 
 .project__btn:hover::before {
-  width:  100%;
+  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
@@ -226,6 +226,7 @@ html {
 }
 
 @keyframes animate-back {
+
   0%,
   100% {
     background-position: center 0%;
@@ -421,10 +422,13 @@ html {
 
 .video__right-container {
   position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: all 0.2s ease;
 }
 
 .video__right-container::before {
-  border-radius: 12px;
+  border-radius: 15px;
   content: '';
   position: absolute;
   top: 0;
@@ -432,6 +436,17 @@ html {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.video__right-container:hover::before {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.video__right-container:hover {
+  transform: scale(1.05);
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .video__right-link {
@@ -632,8 +647,8 @@ html {
 @keyframes animate-back2 {
   0% {
     background-position: 0%;
-  } 
-  
+  }
+
   100% {
     background-position: 100%;
   }
@@ -693,6 +708,8 @@ html {
 .project__cols-container {
   position: relative;
   width: 350px;
+  overflow: hidden;
+  transition: all 0.2s ease;
 }
 
 .project__cols-container::before {
@@ -704,6 +721,17 @@ html {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.project__cols-container:hover {
+  transform: scale(1.05);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.project__cols-container:hover::before {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .project__cols-container2 {
