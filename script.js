@@ -31,4 +31,3 @@ document.getElementById('hideButton').addEventListener('click', function() {
         document.getElementById('showButton').classList.add('project__visible'); 
     }
 });
-
