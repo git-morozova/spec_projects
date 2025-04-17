@@ -44,7 +44,7 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Myriad Pro', sans-serif;
-  min-width: 600px;
+  min-width: 500px;
 }
 .project__container {
   width: 100%;
