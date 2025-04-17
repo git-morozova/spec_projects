@@ -1597,6 +1597,16 @@ border-left: 0;
   .video__timecodes-item {
       padding: 0px 0 10px 20px;
   }
+  
+.video__right-text, .project__cols-text, .project__cols-text2 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.video__main-header, .article__header, .article__important-header {
+  font-size: 34px;
+  line-height: 40px;
+}
 }
 /*
 @media screen and (max-width: 468px) {
