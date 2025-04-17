@@ -1381,7 +1381,7 @@ figure {
   will-change: unset; 
 }
   .project__top {
-    padding: 10px 30px;
+    padding: 30px 30px;
 }
 .project__top-img {
   width: 220px;
@@ -1488,6 +1488,9 @@ border-left: 0;
 }
 .article__text {
   width: 100%;
+}
+.article__wrap  {
+  width: 90%;
 }
 .project__cols-block {
   gap: 50px;
