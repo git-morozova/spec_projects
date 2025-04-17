@@ -45,7 +45,10 @@ html {
   scroll-behavior: smooth;
   font-family: 'Myriad Pro', sans-serif;
 }
+.project__container {
+  width: 100%;
 
+}
 .project__btn {
   border-radius: 30px;
   padding: 14px 53px;
@@ -691,9 +694,10 @@ html {
   width: 100%;
   height: auto;
   margin: 0;
-  padding: 28px 0 37px 0;
+  padding: 28px 0 0 0;
   font-size: 16px;
   line-height: 22px;
+  margin-bottom: 30px;
 }
 
 .project__bottom {
@@ -807,11 +811,12 @@ html {
 }
 
 .project__cols-text2 {
-  padding: 20px 43px 20px 0;
+  padding: 0px 43px 0px 0;
   font-size: 18px;
   line-height: 28px;
   width: 180px;
   color: #000 !important;
+  margin: auto 0;
 }
 
 /* /ПЛИТКА */
@@ -1256,3 +1261,225 @@ figure {
 }
 
 /* /ГАЛЕРЕЯ1 */
+
+
+
+
+
+
+/* media */
+
+
+@media screen and (max-width: 1300px) {
+  .video__container,
+  .project__top,
+  .article__main-container,
+  .article__anons,
+  .project__bottom {
+    max-width: 1000px;
+  }
+
+  .project__top-header,
+  .project__top-header3,
+  .project__top-text,
+  .article__btn-container {
+    width: 95%;
+  }
+
+  .video__main,
+  .video__main-header,
+  .article__text {
+    width: 90%;
+  }
+
+  .video__main-header {
+    margin: 21px 0 20px 0 !important;
+  }
+
+  .video__timecodes-txt {
+    padding: 0;
+  }
+
+  .video__right {
+    max-width: 350px;
+  }
+
+  .video__right-block {
+    padding: 0 0px 20px 30px;
+  }
+
+  .article__wrap {
+    margin: 20px 0px 40px 0;
+  }
+
+  .article__header {
+    padding: 3px 0 20px 0;
+  }
+
+  .article__important {
+    zoom: 0.9;
+  }
+
+  .article__text {
+    line-height: 24px !important;
+  }
+
+  .article__anons {
+    padding: 50px 150px;
+  }
+
+  .project__cols-container {
+    width: 300px;
+  }
+
+  .project__cols-text {
+    max-width: 300px;
+  }
+
+  .project__cols-container2 {
+    width: 105px;
+  }
+
+  .project__cols-playbtn2 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .project__cols-block {
+    gap: 0px;
+  }
+
+  .video__right-text {
+    line-height: 24px;
+  }
+
+  .project__cols {
+    padding: 30px 0 10px 0;
+  }
+
+  .project__back-center2 {
+    height: 143px;
+  }
+
+  .project__back-center {
+    height: 406px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .project__top {
+    padding: 10px 30px;
+}
+.project__top-img {
+  width: 220px;
+}
+.project__top-right {
+  margin: auto 10px;
+}
+.project__top-header3 {
+  font-size: 28px !important;
+  line-height: 35px !important;
+}
+.project__top-line {
+  margin-bottom: 22px;
+}
+.video__right-text {
+  padding: 20px 0 37px 0;
+}
+  .video__right-header {
+    display: none;
+  }
+  .hide_mob {
+    display: none !important;
+  }
+  
+  .video__container {
+    flex-direction: column-reverse;
+    
+  padding: 66px 0px 50px 0px;
+  max-width: none;
+}
+.video__right {
+  display: flex;
+  max-width: none;
+  width: auto;
+  padding: 0 30px 0 30px;
+}
+.video__right-block {
+border-left: 0; 
+  padding: 0 0px 20px 0px; 
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;  
+  gap: 30px; 
+}
+
+.video__right-link {
+  max-width: 500px;
+  display: block;
+  flex-grow: 1;
+  width: 33%;
+}
+.video__main  {
+  width: 100%;
+}
+.video__left {
+  padding: 0 30px 0 30px;
+  width: auto;
+  max-width: none;
+}
+.video__timecodes-item {
+  padding: 0px 0 10px 42px;
+}
+.article__main-container {
+  padding: 0 30px 0 30px;
+  width: auto;
+  max-width: none;
+}
+.article__anons {
+  padding: 30px 150px;
+}
+.article__anons-text {
+  font-size: 24px;
+  line-height: 32px;
+  width: 100%;
+}
+.project__bottom {
+  padding: 0 30px 0 30px;
+  width: auto;
+  max-width: none;
+  overflow: hidden;
+  
+}
+.article__text {
+  width: 100%;
+}
+.project__cols-block {
+  gap: 50px;
+}
+.project__cols-container {
+  width: 100%;
+}
+.project__cols-link {
+  flex-grow: 1;
+}
+.project__cols-player {
+  width: 100%;
+  max-width: none;
+}
+.project__back-center {
+  height: 1021px;
+}
+.project__back-center2 {
+  width: 97%;
+  margin: 0 0 0 -25px;
+}
+.project__cols-text2 {
+  padding: 0px 23px 0px 0;
+}
+}
+
+@media screen and (max-width: 770px) {}
+
+
+/* /media */
