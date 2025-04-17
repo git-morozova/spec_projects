@@ -47,6 +47,7 @@ html {
 }
 .project__container {
   width: 100%;
+  min-width: 468px;
 
 }
 .project__btn {
@@ -1576,12 +1577,12 @@ border-left: 0;
 }
 .project__cols-text, .article__text, .video__right-text,
 .project__top-text {
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 24px;
 }
 .video__main-header, .article__header {
-  font-size: 34px !important;
-  line-height: 40px !important;
+  font-size: 30px !important;
+  line-height: 36px !important;
 }
  .project__bubble-header {
   font-size: 28px !important;
@@ -1595,7 +1596,7 @@ border-left: 0;
       padding: 0px 0 10px 20px;
   }
 }
-
+/*
 @media screen and (max-width: 468px) {
 
 .article__important-overflow {
@@ -1624,5 +1625,5 @@ border-left: 0;
 }
 
 }
-
+*/
 /* /media */
