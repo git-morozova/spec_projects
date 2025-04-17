@@ -501,6 +501,7 @@ html {
   font-size: 18px;
   line-height: 28px;
   color: #000000;
+  position: relative;
 }
 
 .article__anons-container {
@@ -1632,8 +1633,11 @@ border-left: 0;
 .project__top {
   padding: 40px 30px 10px 30px;
 }
-.project__show-img {
+.project__show-img, .project__hide-img {
   left: 39%;
+}
+.project__back-center {
+  height: 2040px;
 }
 }
 /*
