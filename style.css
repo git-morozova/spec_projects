@@ -44,10 +44,12 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Myriad Pro', sans-serif;
+  min-width: 600px;
 }
 .project__container {
   width: 100%;
-  min-width: 468px;
+  padding: 0;
+    margin: 0;
 
 }
 .project__btn {
@@ -1581,8 +1583,8 @@ border-left: 0;
   line-height: 24px;
 }
 .video__main-header, .article__header {
-  font-size: 30px !important;
-  line-height: 36px !important;
+  font-size: 28px !important;
+  line-height: 34px !important;
 }
  .project__bubble-header {
   font-size: 28px !important;
