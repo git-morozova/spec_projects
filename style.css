@@ -47,7 +47,6 @@ html {
 }
 .project__container {
   width: 100%;
-  min-width: 468px;
 
 }
 .project__btn {
@@ -1577,5 +1576,11 @@ border-left: 0;
 }
 }
 
+@media screen and (max-width: 468px) {
+
+  .article__important {
+    width: 100%;
+  }
+}
 
 /* /media */
