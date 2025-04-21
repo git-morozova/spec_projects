@@ -40,7 +40,6 @@
   font-family: 'Myriad Pro Bold';
   src: url('/font/mp_bold.otf');
 }
-
 html {
   scroll-behavior: smooth;
   font-family: 'Myriad Pro', sans-serif;
@@ -230,7 +229,7 @@ p {
   font-family: 'Myriad Pro', sans-serif;
   width: 100%;
   margin: 0;
-  background: url(https://1med.tv/upload/medialibrary/24e/hf35cjvuelqrampt7y60zwpteujdhfwl/top.webp);
+  background: url(https://1med.tv/upload/medialibrary/db9/tj8b4tmv3424a1v1n357joyorrsm5kx0/top.webp);
   font-size: 16px;
   line-height: 22px;
   background-size: cover;
@@ -518,7 +517,7 @@ p {
   width: 100%;
   margin: 50px auto 50px auto;
   color: #ffffff;
-  background: url(https://1med.tv/upload/medialibrary/911/87b23q5ovfei1n8fc36y93sexyj65yas/back_blue.webp) top center / cover no-repeat;
+  background: url(https://1med.tv/upload/medialibrary/16f/z610unnyruo3q01kym4gxsuqq6gcas3i/back_blue.webp) top center / cover no-repeat;
   border-radius: 150px 0px 150px 0px;
   z-index: 10;
   position: relative;
@@ -601,7 +600,7 @@ p {
 .article__pic-back {
   width: 100%;
   margin: 50px auto 150px 50px;
-  background: url(https://1med.tv/upload/medialibrary/fc7/7dgocakjwk60og0n08dn765fgg7v3755/back_grey.png) top center / cover no-repeat;
+  background: url(https://1med.tv/upload/medialibrary/90d/3se632mmj3xslzjtvh0s9298s7ovpdpg/back_grey.webp) top center / cover no-repeat;
   border-radius: 70px;
   height: 680px;
 }
@@ -621,7 +620,7 @@ p {
 .article__pic-back2 {
   width: 100%;
   margin: 50px 50px 150px auto;
-  background: url(https://1med.tv/upload/medialibrary/fc7/7dgocakjwk60og0n08dn765fgg7v3755/back_grey.png) top center / cover no-repeat;
+  background: url(https://1med.tv/upload/medialibrary/90d/3se632mmj3xslzjtvh0s9298s7ovpdpg/back_grey.webp) top center / cover no-repeat;
   border-radius: 70px;
   height: 680px;
 }
@@ -657,7 +656,7 @@ p {
 
 .article__important {
   position: relative;
-  background: url(https://1med.tv/upload/medialibrary/d6d/cju67sjk4z0fjw3zr9qxe2j3jyjrjnsb/back_small3.png);
+  background: url(https://1med.tv/upload/medialibrary/64d/bb1qgd0ib779uek0yin22gric0m9oqq1/back_small3.webp);
   width: 455px;
   height: 210px;
   border-radius: 20px;
@@ -848,10 +847,10 @@ p {
 
 /* media */
 @media screen and (max-width: 1300px) {
-  .video__main, .video__main-header {
+  .video__main {
     width: 90%;
   }
-
+  
   .video__container,
   .project__top,
   .article__main-container,
@@ -1338,7 +1337,6 @@ p {
     padding: 30px 0px 10px 0px;
   }
 }
-
 
 
 /* ГАЛЕРЕЯ1 */
