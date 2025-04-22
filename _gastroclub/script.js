@@ -115,158 +115,103 @@ function slideInitial() {
 
 function updateBullet() {
     if (!noBullets) {
-        document.querySelector('.bullet-container').querySelectorAll('.bullet').forEach((elem, i) => {
-            elem.classList.remove('active');
-            if (i === slideCurrent) {
-                elem.classList.add('active');
-            }
-        })
+        document.querySelectorAll('.bullet').forEach((elem, i) => {
+            elem.classList.toggle('active', i === slideCurrent);
+        });
     }
     checkRepeat();
 }
 
 function checkRepeat() {
     if (!repeat) {
-        if (slideCurrent === slide.length - 1) {
-            slide[0].classList.add('not-visible');
-            slide[slide.length - 1].classList.remove('not-visible');
-            if (!noArrows) {
-                document.querySelector('.slider-right').classList.add('not-visible')
-                document.querySelector('.slider-left').classList.remove('not-visible')
-            }
-        }
-        else if (slideCurrent === 0) {
-            slide[slide.length - 1].classList.add('not-visible');
-            slide[0].classList.remove('not-visible');
-            if (!noArrows) {
-                document.querySelector('.slider-left').classList.add('not-visible')
-                document.querySelector('.slider-right').classList.remove('not-visible')
-            }
+        const first = slide[0], last = slide[slideTotal];
+        if (slideCurrent === slideTotal) {
+            first.classList.add('not-visible');
+            last.classList.remove('not-visible');
+        } else if (slideCurrent === 0) {
+            last.classList.add('not-visible');
+            first.classList.remove('not-visible');
         } else {
-            slide[slide.length - 1].classList.remove('not-visible');
-            slide[0].classList.remove('not-visible');
-            if (!noArrows) {
-                document.querySelector('.slider-left').classList.remove('not-visible')
-                document.querySelector('.slider-right').classList.remove('not-visible')
-            }
+            first.classList.remove('not-visible');
+            last.classList.remove('not-visible');
         }
     }
 }
 
-function slideRight() {
-    if (slideCurrent < slideTotal) {
-        slideCurrent++;
-    } else {
-        slideCurrent = 0;
+function changeSlide(direction) {
+    removeListenersFromSlides();
+    let nextIndex;
+    switch (direction) {
+        case 'right':
+            nextIndex = slideCurrent >= slideTotal ? 0 : slideCurrent + 1;
+            break;
+        case 'left':
+            nextIndex = slideCurrent <= 0 ? slideTotal : slideCurrent - 1;
+            break;
     }
 
-    if (slideCurrent > 0) {
-        var preactiveSlide = slide[slideCurrent - 1];
-    } else {
-        var preactiveSlide = slide[slideTotal];
-    }
-    var activeSlide = slide[slideCurrent];
-    if (slideCurrent < slideTotal) {
-        var proactiveSlide = slide[slideCurrent + 1];
-    } else {
-        var proactiveSlide = slide[0];
-
-    }
-
-    slide.forEach((elem) => {
-        var thisSlide = elem;
-        if (thisSlide.classList.contains('preactivede')) {
-            thisSlide.classList.remove('preactivede');
-            thisSlide.classList.remove('preactive');
-            thisSlide.classList.remove('active');
-            thisSlide.classList.remove('proactive');
-            thisSlide.classList.add('proactivede');
-        }
-        if (thisSlide.classList.contains('preactive')) {
-            thisSlide.classList.remove('preactive');
-            thisSlide.classList.remove('active');
-            thisSlide.classList.remove('proactive');
-            thisSlide.classList.remove('proactivede');
-            thisSlide.classList.add('preactivede');
-        }
+    slide.forEach(elem => {
+        elem.classList.remove('preactivede', 'preactive', 'active', 'proactive', 'proactivede');
     });
-    preactiveSlide.classList.remove('preactivede');
-    preactiveSlide.classList.remove('active');
-    preactiveSlide.classList.remove('proactive');
-    preactiveSlide.classList.remove('proactivede');
-    preactiveSlide.classList.add('preactive');
 
-    activeSlide.classList.remove('preactivede');
-    activeSlide.classList.remove('preactive');
-    activeSlide.classList.remove('proactive');
-    activeSlide.classList.remove('proactivede');
-    activeSlide.classList.add('active');
+    if (nextIndex > 0) {
+        slide[nextIndex - 1].classList.add('preactive');
+    }
+    slide[nextIndex].classList.add('active');
+    if (nextIndex < slideTotal) {
+        slide[nextIndex + 1].classList.add('proactive');
+    }
 
-    proactiveSlide.classList.remove('preactivede');
-    proactiveSlide.classList.remove('preactive');
-    proactiveSlide.classList.remove('active');
-    proactiveSlide.classList.remove('proactivede');
-    proactiveSlide.classList.add('proactive');
-
+    slideCurrent = nextIndex;
+    addListenersForSlides();
     updateBullet();
 }
 
-function slideLeft() {
-    if (slideCurrent > 0) {
-        slideCurrent--;
-    } else {
-        slideCurrent = slideTotal;
-    }
-
-    if (slideCurrent < slideTotal) {
-        var proactiveSlide = slide[slideCurrent + 1];
-    } else {
-        var proactiveSlide = slide[0];
-    }
-    var activeSlide = slide[slideCurrent];
-    if (slideCurrent > 0) {
-        var preactiveSlide = slide[slideCurrent - 1];
-    } else {
-        var preactiveSlide = slide[slideTotal];
-    }
-    slide.forEach((elem) => {
-        var thisSlide = elem;
-        if (thisSlide.classList.contains('proactive')) {
-            thisSlide.classList.remove('preactivede');
-            thisSlide.classList.remove('preactive');
-            thisSlide.classList.remove('active');
-            thisSlide.classList.remove('proactive');
-            thisSlide.classList.add('proactivede');
+document.querySelectorAll('.slider-single').forEach(sliderItem => {
+    sliderItem.addEventListener('click', function(event) {
+        event.stopPropagation(); 
+        const activeClass = this.classList.contains('preactive') ? 'preactive' : 'proactive';
+        if (activeClass === 'preactive') {
+            slideLeft();
+        } else if (activeClass === 'proactive') {
+            slideRight();
         }
-        if (thisSlide.classList.contains('proactivede')) {
-            thisSlide.classList.remove('preactive');
-            thisSlide.classList.remove('active');
-            thisSlide.classList.remove('proactive');
-            thisSlide.classList.remove('proactivede');
-            thisSlide.classList.add('preactivede');
-        }
+        stopAutoPlay();
     });
+});
 
-    preactiveSlide.classList.remove('preactivede');
-    preactiveSlide.classList.remove('active');
-    preactiveSlide.classList.remove('proactive');
-    preactiveSlide.classList.remove('proactivede');
-    preactiveSlide.classList.add('preactive');
+function addListenersForSlides() {
+    const preactive = document.querySelector('.preactive');
+    const proactive = document.querySelector('.proactive');
 
-    activeSlide.classList.remove('preactivede');
-    activeSlide.classList.remove('preactive');
-    activeSlide.classList.remove('proactive');
-    activeSlide.classList.remove('proactivede');
-    activeSlide.classList.add('active');
-
-    proactiveSlide.classList.remove('preactivede');
-    proactiveSlide.classList.remove('preactive');
-    proactiveSlide.classList.remove('active');
-    proactiveSlide.classList.remove('proactivede');
-    proactiveSlide.classList.add('proactive');
-
-    updateBullet();
+    if (proactive) {
+        proactive.addEventListener('click', slideRight);
+        proactive.classList.add('pointer');
+    }
+    if (preactive) {
+        preactive.addEventListener('click', slideLeft);
+        preactive.classList.add('pointer');
+    }    
 }
+
+addListenersForSlides();
+
+function removeListenersFromSlides() {
+    const oldProactive = document.querySelector('.proactive');
+    const oldPreactive = document.querySelector('.preactive');
+
+    if (oldProactive) {
+        oldProactive.removeEventListener('click', slideRight);
+        oldProactive.classList.remove('pointer');
+    }
+    if (oldPreactive) {
+        oldPreactive.removeEventListener('click', slideLeft);
+        oldPreactive.classList.remove('pointer');
+    }    
+}
+
+function slideRight() { changeSlide('right'); }
+function slideLeft() { changeSlide('left'); }
 
 function goToIndexSlide(index) {
     const sliding = (slideCurrent > index) ? () => slideRight() : () => slideLeft();
