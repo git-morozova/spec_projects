@@ -1,3 +1,4 @@
+
 // Кнопка разворачивания скрытого текста
 document.getElementById('showButton').addEventListener('click', function () {
     const expandableBlock = document.getElementById('expandableBlock');
@@ -37,12 +38,12 @@ function slideInitial() {
 }
 
 function startAutoPlay() {
-    clearInterval(timer); 
-    timer = setInterval(slideRight, 6000); 
+    clearInterval(timer);
+    timer = setInterval(slideRight, 6000);
 }
 
 function stopAutoPlay() {
-    clearInterval(timer); 
+    clearInterval(timer);
 }
 
 const repeat = false;
@@ -54,7 +55,7 @@ var slide = document.querySelectorAll('.slider-single');
 var slideTotal = slide.length - 1;
 var slideCurrent = -1;
 
-startAutoPlay(); 
+startAutoPlay();
 
 function initBullets() {
     if (noBullets) return;
@@ -67,8 +68,8 @@ function initBullets() {
         bullet.classList.add('bullet');
         bullet.id = `bullet-index-${i}`;
         bullet.addEventListener('click', () => {
-            stopAutoPlay();       
-            goToIndexSlide(i);    
+            stopAutoPlay();
+            goToIndexSlide(i);
         });
         bulletContainer.appendChild(bullet);
     });
@@ -85,9 +86,9 @@ function initArrows() {
     leftArrow.classList.add('slider-left');
     leftArrow.appendChild(iLeft);
     leftArrow.addEventListener('click', () => {
-        stopAutoPlay();   
-        slideLeft();        
-        startAutoPlay();  
+        stopAutoPlay();
+        slideLeft();
+        startAutoPlay();
     });
 
     const rightArrow = document.createElement('a');
@@ -96,9 +97,9 @@ function initArrows() {
     rightArrow.classList.add('slider-right');
     rightArrow.appendChild(iRight);
     rightArrow.addEventListener('click', () => {
-        stopAutoPlay();     
-        slideRight(); 
-        startAutoPlay();  
+        stopAutoPlay();
+        slideRight();
+        startAutoPlay();
     });
 
     container.appendChild(leftArrow);
@@ -122,18 +123,31 @@ function updateBullet() {
     checkRepeat();
 }
 
+
 function checkRepeat() {
     if (!repeat) {
-        const first = slide[0], last = slide[slideTotal];
-        if (slideCurrent === slideTotal) {
-            first.classList.add('not-visible');
-            last.classList.remove('not-visible');
-        } else if (slideCurrent === 0) {
-            last.classList.add('not-visible');
-            first.classList.remove('not-visible');
+        if (slideCurrent === slide.length - 1) {
+            slide[0].classList.add('not-visible');
+            slide[slide.length - 1].classList.remove('not-visible');
+            if (!noArrows) {
+                document.querySelector('.slider-right').classList.add('not-visible')
+                document.querySelector('.slider-left').classList.remove('not-visible')
+            }
+        }
+        else if (slideCurrent === 0) {
+            slide[slide.length - 1].classList.add('not-visible');
+            slide[0].classList.remove('not-visible');
+            if (!noArrows) {
+                document.querySelector('.slider-left').classList.add('not-visible')
+                document.querySelector('.slider-right').classList.remove('not-visible')
+            }
         } else {
-            first.classList.remove('not-visible');
-            last.classList.remove('not-visible');
+            slide[slide.length - 1].classList.remove('not-visible');
+            slide[0].classList.remove('not-visible');
+            if (!noArrows) {
+                document.querySelector('.slider-left').classList.remove('not-visible')
+                document.querySelector('.slider-right').classList.remove('not-visible')
+            }
         }
     }
 }
@@ -168,8 +182,8 @@ function changeSlide(direction) {
 }
 
 document.querySelectorAll('.slider-single').forEach(sliderItem => {
-    sliderItem.addEventListener('click', function(event) {
-        event.stopPropagation(); 
+    sliderItem.addEventListener('click', function (event) {
+        event.stopPropagation();
         const activeClass = this.classList.contains('preactive') ? 'preactive' : 'proactive';
         if (activeClass === 'preactive') {
             slideLeft();
@@ -191,7 +205,7 @@ function addListenersForSlides() {
     if (preactive) {
         preactive.addEventListener('click', slideLeft);
         preactive.classList.add('pointer');
-    }    
+    }
 }
 
 addListenersForSlides();
@@ -207,7 +221,7 @@ function removeListenersFromSlides() {
     if (oldPreactive) {
         oldPreactive.removeEventListener('click', slideLeft);
         oldPreactive.classList.remove('pointer');
-    }    
+    }
 }
 
 function slideRight() { changeSlide('right'); }
