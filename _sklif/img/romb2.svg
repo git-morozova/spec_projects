@@ -1,0 +1,21 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 100" width="146" height="100">
+	<title>sklif_bunner</title>
+	<defs>
+		<filter x="-50%" y="-50%" width="200%" height="200%" id="f1" ><feDropShadow dx="1.1238197802477363" dy="2.7815515637003623" stdDeviation="2.0833333333333335" flood-color="#000000" flood-opacity=".4"/></filter>
+		<filter x="-50%" y="-50%" width="200%" height="200%" id="f2" ><feDropShadow dx="1.1238197802477363" dy="2.7815515637003623" stdDeviation="2.0833333333333335" flood-color="#000000" flood-opacity=".4"/></filter>
+		<filter x="-50%" y="-50%" width="200%" height="200%" id="f3" ><feDropShadow dx="1.1238197802477363" dy="2.7815515637003623" stdDeviation="2.0833333333333335" flood-color="#000000" flood-opacity=".4"/></filter>
+		<filter x="-50%" y="-50%" width="200%" height="200%" id="f4" ><feDropShadow dx="1.1238197802477363" dy="2.7815515637003623" stdDeviation="2.0833333333333335" flood-color="#000000" flood-opacity=".4"/></filter>
+	</defs>
+	<style>
+		.s0 { filter: url(#f1);fill: #4d709c } 
+		.s1 { fill: #c5e1ff } 
+		.s2 { filter: url(#f2);fill: #4d709c } 
+		.s3 { filter: url(#f3);fill: #78b4f2 } 
+		.s4 { filter: url(#f4);fill: #78b4f2 } 
+	</style>
+	<path id="Фигура 5" fill-rule="evenodd" class="s0" d="m62.9 15.1l26 26c5.4 5.5 5.4 14.3 0 19.8l-26 26c-5.5 5.4-14.3 5.4-19.8 0l-26-26c-5.4-5.5-5.4-14.3 0-19.8l26-26c5.5-5.4 14.3-5.4 19.8 0z"/>
+	<path id="Фигура 6" fill-rule="evenodd" class="s1" d="m45.8 29.9l10.8 10.8c2 2 2 5.1 0 7.1l-10.8 10.8c-2 2-5.1 2-7.1 0l-10.8-10.8c-2-2-2-5.1 0-7.1l10.8-10.8c2-2 5.1-2 7.1 0z"/>
+	<path id="Фигура 6 copy 2" fill-rule="evenodd" class="s2" d="m106.7 58.4l6.2 6.2c2 2 2 5.2 0 7.1l-6.2 6.2c-2 2-5.1 2-7.1 0l-6.2-6.2c-2-1.9-2-5.1 0-7.1l6.2-6.2c2-1.9 5.1-1.9 7.1 0z"/>
+	<path id="Фигура 6 copy" fill-rule="evenodd" class="s3" d="m113 29.4l6.5 6.5c2 2 2 5.1 0 7.1l-6.5 6.5c-2 2-5.1 2-7.1 0l-6.5-6.5c-2-2-2-5.1 0-7.1l6.5-6.5c2-2 5.1-2 7.1 0z"/>
+	<path id="Фигура 7" fill-rule="evenodd" class="s4" d="m128.4 51.9l6 6c0.8 0.8 0.8 2.1 0 2.9l-6 6c-0.8 0.8-2 0.8-2.8 0l-6-6c-0.8-0.8-0.8-2.1 0-2.9l6-6c0.8-0.8 2-0.8 2.8 0z"/>
+</svg>
