@@ -557,12 +557,6 @@ p {
   width: 85%;
 }
 
-
-
-
-
-
-
 .article__anons2-container {
   width: 100%;
   margin: 200px auto 50px auto;
@@ -613,13 +607,7 @@ p {
   width: 100%;
 }
 
-
-
-
-
-
 .article__main-container {
-  width: 100%;
   margin: 0 auto;
   max-width: 1200px;
   z-index: 5;
@@ -895,7 +883,7 @@ p {
   width: 100%;
   height: auto;
   margin: 0;
-  padding: 28px 0 37px 0;
+  padding: 60px 0 37px 0;
   font-size: 16px;
   line-height: 22px;
 }
@@ -1012,7 +1000,6 @@ p {
   line-height: 28px;
   max-width: 350px;
   color: #000 !important;
-
 }
 
 .project__cols-text2 {
@@ -1023,8 +1010,75 @@ p {
   color: #000 !important;
   margin: auto 0;
 }
-
 /* /ПЛИТКА */
+
+/* ТАБЛИЦА */
+.project__tables-container {
+  margin-top: 50px;
+}
+.project__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 10px 0;
+  border: 1px solid #a91f0a;
+  font-size: 18px;
+  line-height: 24px;
+}
+.project__table-cell-num {
+width: 30px;
+text-align: center;
+padding: 0 25px 0 25px;
+}
+.project__table-cell-title {
+  width: 60%;
+  padding: 8px 0;
+  }
+  .project__table-cell-lectors {
+    height: calc(40% - 50px);
+    padding: 0 25px 0 25px;
+    }
+  
+.project__table-cell {
+  position: relative;
+}
+
+.project__table-inner {
+  display: block;
+  height: calc(100% - 10px);
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  padding: 0 25px 0 25px;
+}
+
+.project__table:nth-child(even) {
+  background-color: #b6826221;
+}
+
+@media only screen and (max-width: 770px) { 
+  .project__table,
+  .project__table-cell,
+  .project__table-row
+ {
+      display: block;
+  }
+  
+  .project__table-row {
+      margin: 10px;
+  }
+}
+
+/* ТАБЛИЦА */
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1153,7 +1207,6 @@ p {
   .article__citate-bage {
     display: none;
   }
-
 }
 
 @media screen and (max-width: 1100px) {
@@ -1167,7 +1220,6 @@ p {
   .project__top-container {
     animation: none;
     will-change: unset;
-
   }
 
   .project__top {
@@ -1190,7 +1242,6 @@ p {
   .project__top-text {
     font-size: 16px;
     line-height: 22px;
-
   }
 
   .video__right-text {
@@ -1294,7 +1345,6 @@ p {
     width: auto;
     max-width: none;
     overflow: hidden;
-
   }
 
   .article__text {
@@ -1341,11 +1391,12 @@ p {
     padding: 0px 0 0px 21px;
     line-height: 24px;
   }
+  .project__tables-container {
+    margin-top: 0px;
+}
 }
 
 @media screen and (max-width: 770px) {
-
-
   .project__top {
     flex-direction: column;
     margin-bottom: 140px;
@@ -1406,7 +1457,6 @@ p {
   .article__important-header,
   .article__important-text {
     text-align: center;
-
   }
 
   .video__main-header,
@@ -1549,6 +1599,35 @@ p {
   .project__cols {
     padding: 30px 0px 10px 0px;
   }
+
+  .project__table-cell-num {
+    width: auto;
+    text-align: center;
+    padding: 25px 0;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+}
+.project__table-cell-lectors {
+  color: #959595;
+  text-align: center;
+  padding: 0;
+}
+.project__table-cell-title {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  line-height: 28px;
+}
+.project__table-inner {
+  border-left: 0;
+  border-right: 0;
+}  
+.project__table-cell {
+  display: inline-block; 
+  width: 100%;
+} 
+
 }
 
 
@@ -1583,12 +1662,6 @@ p {
   }
 }
 
-
-
-
-
-
-
 @media screen and (max-width: 500px) {
   .project__container {
     zoom: 0.8;
@@ -1621,7 +1694,6 @@ p {
   }
 }
 
-
 @media screen and (max-width: 1500px) {
   .article__anons2-left {
     padding: 50px 50px 0px 50px;
@@ -1640,13 +1712,11 @@ p {
 }
 }
 
-
 @media screen and (max-width: 1150px) {
   .article__anons2-img {
     margin: -100px 0 0 0;
 }
 }
-
 
 @media screen and (max-width: 1050px) {
   .article__anons2-left {
@@ -1662,10 +1732,7 @@ p {
 }
 }
 
-
-@media screen and (max-width: 800px) {
-
-  
+@media screen and (max-width: 800px) {  
 .article__anons2-container {
 flex-direction: column;
 }
@@ -1684,15 +1751,6 @@ flex-direction: column;
   text-align: center;
 }
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2063,22 +2121,21 @@ flex-direction: column;
 
   .slider-left {
     right: calc(50% + 20px);
-
   }
 
   .slider-right {
     left: calc(50% + 20px);
-
   }
 
   .slider-container .slider-content .slider-single .slider-single-main .slider-single-main-big {
     line-height: 40px;
   }
-
-
 }
 
 /* /ГАЛЕРЕЯ2 */
+
+
+
 
 
 
