@@ -9,6 +9,17 @@ p {
   margin: 0;
 }
 
+.seminar {
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.video-player {
+  border-radius: 12px;
+}
 .project__container {
   width: 100%;
   padding: 0;
