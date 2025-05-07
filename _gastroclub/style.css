@@ -1166,8 +1166,6 @@ p {
 }
 
 @media screen and (max-width: 770px) {
-
-
   .project__top {
     flex-direction: column;
     margin-bottom: 140px;
