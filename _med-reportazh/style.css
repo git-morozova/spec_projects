@@ -132,6 +132,21 @@ p {
 
 /* /КНОПКА1 */
 
+/* КНОПКА2 */
+.article__btn-container {
+  text-align: center;
+  width: 85%;
+  margin-top: 35px;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1300px) {
+  .article__btn-container {
+    width: 100%;
+  }
+}
+/* /КНОПКА2 */
+
 /* РАЗДЕЛИТЕЛЬ */
 .article__wrap {
   margin: 50px 0px 50px 0;
@@ -1186,13 +1201,6 @@ width: 180px;
   line-height: 28px !important;
 }
 
-.article__btn-container {
-  text-align: center;
-  width: 85%;
-  margin-top: 35px;
-  margin-bottom: 100px;
-}
-
 @media screen and (max-width: 1300px) {
   .article__main-container {
     max-width: none;
@@ -1236,16 +1244,6 @@ width: 180px;
 }
 
 /* /СТАТЬЯ 1 КОЛОНКА */
-
-/* КНОПКА2 */
-.article__btn-container {
-  text-align: center;
-  width: 85%;
-  margin-top: 35px;
-  margin-bottom: 100px;
-}
-
-/* /КНОПКА2 */
 
 /* СТАТЬЯ - БЛОК ВАЖНО */
 .article__container {
