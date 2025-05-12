@@ -2232,6 +2232,7 @@ width: 180px;
 
 
 
+
 /* СТАТЬЯ - СПИСОК */
 .article__container {
   font-family: 'Myriad Pro', sans-serif;
@@ -2270,11 +2271,7 @@ width: 180px;
   position: relative;
 }
 
-.article__list-ul>li {
-  position: relative;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  color: #333;
+.article__list-li {
   display: flex;
 }
 
@@ -2296,7 +2293,7 @@ width: 180px;
   background-color: #337AB7;
 }
 
-.article__list-ul>li::before {
+.article__list-li::before {
   content: '';
   position: absolute;
   top: -10px;
@@ -2309,7 +2306,7 @@ width: 180px;
 
 .article__list-text {
   width: calc(100% - 126px);
-  margin: 0 50px;
+  margin: 0 50px 25px 50px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -2340,19 +2337,23 @@ width: 180px;
   .article__list-left {
     width: 100%;
     text-align: center;
+    padding: 0 0px 40px 0;
   }
+  
+.article__list-right {
+  width: auto;
+}
 }
 
 @media screen and (max-width: 465px) {
   .article__list-text {
     width: calc(100% - 67px);
-    margin: 0 20px;
+    margin: 0 20px 20px 20px;
   }
 }
 
 
 /* /СТАТЬЯ - СПИСОК */
-
 
 
 

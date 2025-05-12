@@ -494,7 +494,7 @@ p {
 }
 
 .video__main {
-  margin: 10px 0 0 0;
+  border: 1px solid #000;
   border-radius: 12px;
   width: 85%;
   cursor: pointer;
@@ -563,7 +563,7 @@ p {
 
 @media screen and (max-width: 770px) {
   .video__container {
-    padding: 0px 0px 0px 0px;
+    padding: 80px 0px 0px 0px;
   }
 
   .video__right-text,
@@ -574,16 +574,8 @@ p {
 
   .video__main-header {
     width: 100%;
-  }
-
-  .video__main-header {
-    font-size: 28px !important;
-    line-height: 34px !important;
-  }
-
-  .video__main-header {
-    font-size: 34px !important;
-    line-height: 40px !important;
+    font-size: 30px !important;
+    line-height: 36px !important;
   }
 
   .hide_mob {
@@ -612,7 +604,11 @@ p {
   margin-top: 35px;
   margin-bottom: 100px;
 }
-
+@media screen and (max-width: 770px) {
+  .article__btn-container {
+    width: auto;
+  }
+}
 /* /КНОПКА2 */
 
 
@@ -792,8 +788,8 @@ p {
   }
 
   .project__bubble-header {
-    font-size: 28px !important;
-    line-height: 34px !important;
+    font-size: 24px !important;
+    line-height: 30px !important;
   }
 
   .project__bubble-line {
@@ -1153,7 +1149,7 @@ p {
   }
 
   .slider-content {
-    height: 530px;
+    height: 449px;
     top: 0;
     left: 0;
     transform: none;
@@ -1627,11 +1623,7 @@ p {
   position: relative;
 }
 
-.article__list-ul>li {
-  position: relative;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  color: #333;
+.article__list-li {
   display: flex;
 }
 
@@ -1653,7 +1645,7 @@ p {
   background-color: #337AB7;
 }
 
-.article__list-ul>li::before {
+.article__list-li::before {
   content: '';
   position: absolute;
   top: -10px;
@@ -1666,7 +1658,7 @@ p {
 
 .article__list-text {
   width: calc(100% - 126px);
-  margin: 0 50px;
+  margin: 0 50px 25px 50px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -1697,13 +1689,18 @@ p {
   .article__list-left {
     width: 100%;
     text-align: center;
+    padding: 0 0px 40px 0;
   }
+  
+.article__list-right {
+  width: auto;
+}
 }
 
 @media screen and (max-width: 465px) {
   .article__list-text {
     width: calc(100% - 67px);
-    margin: 0 20px;
+    margin: 0 20px 20px 20px;
   }
 }
 
