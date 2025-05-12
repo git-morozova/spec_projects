@@ -780,6 +780,9 @@ p {
     max-width: none;
     overflow: hidden;
   }
+    .project__bubble {
+    padding: 0 0px;
+  }
 }
 
 @media screen and (max-width: 770px) {
@@ -1277,7 +1280,12 @@ p {
   overflow: hidden;
   transition: all 0.2s ease;
 }
-
+.project__cols-container4 {
+  position: relative;
+  width: 430px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
 .project__cols-container3::before {
   border-radius: 12px;
   content: '';
@@ -1369,7 +1377,7 @@ p {
   }
 
   .project__cols3 {
-    padding: 0px 0 0px 0;
+    padding: 40px 0 0px 0;
     width: auto;
   }
 
@@ -1378,6 +1386,10 @@ p {
   }
 
   .project__cols-container3 {
+    width: 400px;
+  }
+  
+  .project__cols-container4 {
     width: 400px;
   }
 }
@@ -1398,6 +1410,9 @@ p {
     width: 300px;
   }
 
+  .project__cols-container4 {
+    width: 300px;
+  }
   .project__cols-playbtn3 {
     width: 64px;
   }
@@ -1424,6 +1439,9 @@ p {
     width: 100%;
   }
 
+  .project__cols-container4 {
+    width: 100%;
+  }
   .project__cols-playbtn3 {
     width: 100px;
   }
