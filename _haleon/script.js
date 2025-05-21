@@ -297,7 +297,7 @@ slideInitial();
     ----------------------------------------------------------*/
 const config = {
   autoload: false,
-  itemsToBeVisible: 3,
+  itemsToBeVisible: 4,
   speed: 5000
 };
 
@@ -331,9 +331,9 @@ function start() {
 function setSlidersStyle(config) {
   document.querySelector(
     "style"
-  ).textContent += `@media screen and (min-width:1180px) { .carousel__slide{ min-width: ${
+  ).textContent += ` .carousel__slide{ min-width: ${
     100 / config.itemsToBeVisible
-  }% } }`;
+  }% }`;
 }
 
 /*----------------------------------------
