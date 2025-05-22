@@ -3239,6 +3239,204 @@ width: 180px;
 
 
 
+/* ЛОГО ПО ЦЕНТРУ  */
+.project__logo {
+  margin: 0 auto;
+  max-width: 400px;
+  display: flex;
+}
+
+/* /ЛОГО ПО ЦЕНТРУ  */
+
+
+
+
+
+
+
+
+/* КАРУСЕЛЬ ПРОСТАЯ */
+
+.carousel__wrapper {
+     padding: 20px 50px 50px 50px;
+}
+
+.carousel__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel__container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.carousel__container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  min-width: 90%;
+    margin-right: 20px;
+}
+.card__inner {
+ border: 3px solid #30ea03;
+border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+  border-radius: 15px 15px 0 0;
+  background-color: #ffffff;
+      position: relative;
+}
+
+.card__image {
+    max-width: 95%;    
+    height: 260px;
+}
+.card__header {
+position: absolute;
+    text-align: center;
+    width: 79%;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 288px;
+    display: flex;
+    align-items: center;
+}
+
+.slider-left-small {
+  position: absolute;
+  right: calc(50% + 25px);
+  margin-right: -2px;
+  background: url(https://1med.tv/upload/medialibrary/461/cjns37lbc97ywvmrw2r34gc60kpbj1f9/arrow_left-black.svg) no-repeat;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease-in-out;
+  bottom: -60px;
+}
+
+.slider-right-small {
+  position: absolute;
+  left: calc(50% + 25px);
+  bottom: -60px;
+  width: 50px;
+  height: 50px;
+  margin-left: -2px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease-in-out;
+  background: url(https://1med.tv/upload/medialibrary/e9f/npfh360qvz5uhd849llhq7s4mux3x36b/arrow_right-black.svg) no-repeat;
+}
+
+.slider-right-small:hover,
+.slider-left-small:hover {
+  transform: scale(1.2);
+}
+
+.project__carousel-btn {
+  border-radius: 0 0 15px 15px;
+  font-size: 22px;
+  line-height: 28px;
+  color: rgb(0, 0, 0);
+  text-decoration: none !important;
+  background-color: #30ea03;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.project__carousel-btn::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 0%;
+  height: 0%;
+  top: 50%;
+  left: 50%;
+  transition:
+    width 0.35s ease,
+    height 0.15s ease,
+    left 0.35s ease,
+    top 0.15s ease,
+    transform 0.5s ease;
+  border-radius: inherit;
+}
+
+.project__carousel-btn:hover::before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.project__carousel-btn:hover {
+  color: #ffffff;
+}
+
+.project__carousel-btn-span {
+  z-index: 5;
+  position: relative;
+}
+
+@media screen and (max-width: 1150px) {
+  .project__carousel-btn {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0px 0;
+  }
+  .carousel__slide {
+    min-width: 33.5% !important;
+    scroll-snap-align: center;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .project__carousel-btn {
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }  
+  .carousel__slide {
+    min-width: 51% !important;
+    scroll-snap-align: center;
+    position: relative;
+  }
+  .carousel__wrapper {
+    padding: 20px 30px 50px 30px;
+}
+}
+
+@media screen and (max-width: 600px) {
+
+  .carousel__slide {
+    min-width: 101% !important;
+    scroll-snap-align: center;
+    position: relative;
+  }
+  .card {
+    margin-right: 10px;
+}
+}
+/* /КАРУСЕЛЬ ПРОСТАЯ */
 
 
 
