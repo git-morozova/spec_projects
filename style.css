@@ -2877,6 +2877,7 @@ p {
   font-size: 18px;
   line-height: 28px;
   padding: 24px 0 0 70px;
+  font-family: 'Myriad Pro', sans-serif;
 }
 
 @media screen and (max-width: 1300px) {
@@ -3157,6 +3158,7 @@ p {
   position: relative;
   background-color: #000000;
   display: flex;
+      font-family: 'Myriad Pro', sans-serif;
 }
 
 .article__anons2-left {
@@ -3236,8 +3238,8 @@ p {
   }
 
   .article__anons2-text {
-    font-size: 14px !important;
-    line-height: 18px !important;
+    font-size: 16px !important;
+        line-height: 20px !important;
     margin: -20px 0 25px 0 !important;
   }
 }
@@ -3263,6 +3265,8 @@ p {
 
   .article__anons2-text {
     text-align: center;
+    font-size: 14px !important;
+        line-height: 18px !important;
   }
 }
 
@@ -3441,6 +3445,8 @@ position: absolute;
     height: 288px;
     display: flex;
     align-items: center;
+        font-size: 16px;
+        font-family: 'Myriad Pro', sans-serif;
 }
 
 .slider-left-small {
@@ -3522,6 +3528,10 @@ position: absolute;
   z-index: 5;
   position: relative;
 }
+
+  .carousel__slide {
+    font-family: 'Myriad Pro', sans-serif;
+  }
 
 @media screen and (max-width: 1150px) {
   .project__carousel-btn {
